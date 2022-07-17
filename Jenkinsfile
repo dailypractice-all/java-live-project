@@ -1,10 +1,12 @@
 pipeline {
-  agent {label javaagent}
+  agent {
+    label('javaagent')
+  }
   options {
     ansiColor('xterm')
   }
   stages {
-    stage ('Create jobs') {
+    stage ('Build Project') {
       steps {
         sh 'mvn clean install'
       }
