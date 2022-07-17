@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent java-job-project
   options {
     ansiColor('xterm')
   }
