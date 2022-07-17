@@ -42,7 +42,7 @@ pipeline {
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
                       
-                      if(${pom.version}.contins("-SNAPSHOT"){
+                      if(${pom.version}.contins("-SNAPSHOT")) {
                         NEXUS_REPOSITORY = NEXUS_LOCAL_REPOSITORY;
                       }else{
                         NEXUS_REPOSITORY = NEXUS_RELEASE_REPOSITORY;
